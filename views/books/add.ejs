@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Add Book</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body style="background-color:rgb(43, 255, 0);">
+<body class="container" style="margin-top: 50px;">
+
+        <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+        <% } %>
+
+    <div class="card">
+        <div class="card-header">
+           <p style="font-size:50px;">
+            <h1 style="color:rgb(255, 0, 0);">
+                        lisää opiskelija
+                </div>
+        <div class="card-body">
+            <form action="/books/add" method="post">
+                <div class="form-group">
+                    <label>etunimi:</label>
+                    <input type="text" class="form-control" name="etunimi" value="<%= etunimi %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>sukunimi:</label>
+                    <input type="text" class="form-control" name="sukunimi" value="<%= sukunimi %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>osoite:</label>
+                    <input type="text" class="form-control" name="osoite" value="<%= osoite %>" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label>luokkatunnus:</label>
+                        <input type="text" class="form-control" name="luokkatunnus" value="<%= luokkatunnus %>" autocomplete="off">
+                        </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="lisää"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
